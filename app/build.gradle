@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.improve10x.logicalproblems'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.improve10x.logicalproblems"
@@ -25,6 +25,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true;
     }
 }
 
