@@ -8,6 +8,7 @@ import android.os.Bundle;
 import com.improve10x.logicalproblems.databinding.ActivityMainBinding;
 import com.improve10x.logicalproblems.hoursandminutesintoseconds.HoursAndMinutesIntoSecondsActivity;
 import com.improve10x.logicalproblems.minutestoseconds.MinutesToSecondsActivity;
+import com.improve10x.logicalproblems.namegreeting.NameGreetingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         handleMinsToSec();
         handleHrsAndMinsIntoSec();
+        handleNameGreeting();
     }
 
     private void handleMinsToSec() {
@@ -32,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleHrsAndMinsIntoSec() {
         binding.hrsAndMinsIntoSecBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, HoursAndMinutesIntoSecondsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleNameGreeting() {
+        binding.nameGreetingBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, NameGreetingActivity.class);
             startActivity(intent);
         });
     }

@@ -31,6 +31,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Hrs and Mins into Seconds" />
+
+            <Button
+                android:id="@+id/name_greeting_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name Greeting" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
