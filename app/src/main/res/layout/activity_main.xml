@@ -25,6 +25,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Minutes to Seconds" />
+
+            <Button
+                android:id="@+id/hrs_and_mins_into_sec_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hrs and Mins into Seconds" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

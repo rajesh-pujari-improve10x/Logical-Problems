@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.improve10x.logicalproblems.databinding.ActivityMainBinding;
+import com.improve10x.logicalproblems.hoursandminutesintoseconds.HoursAndMinutesIntoSecondsActivity;
 import com.improve10x.logicalproblems.minutestoseconds.MinutesToSecondsActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,11 +19,19 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         handleMinsToSec();
+        handleHrsAndMinsIntoSec();
     }
 
     private void handleMinsToSec() {
         binding.minsToSecondsBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, MinutesToSecondsActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleHrsAndMinsIntoSec() {
+        binding.hrsAndMinsIntoSecBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, HoursAndMinutesIntoSecondsActivity.class);
             startActivity(intent);
         });
     }

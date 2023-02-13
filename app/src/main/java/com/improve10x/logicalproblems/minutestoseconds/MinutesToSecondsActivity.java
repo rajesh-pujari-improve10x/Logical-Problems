@@ -16,6 +16,7 @@ public class MinutesToSecondsActivity extends AppCompatActivity implements MinsT
         super.onCreate(savedInstanceState);
         binding = ActivityMinutesToSecondsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().setTitle("Minutes to Seconds");
         handleConvertSeconds();
     }
 
