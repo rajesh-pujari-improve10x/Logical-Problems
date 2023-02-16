@@ -9,6 +9,7 @@ import com.improve10x.logicalproblems.databinding.ActivityMainBinding;
 import com.improve10x.logicalproblems.hoursandminutesintoseconds.HoursAndMinutesIntoSecondsActivity;
 import com.improve10x.logicalproblems.minutestoseconds.MinutesToSecondsActivity;
 import com.improve10x.logicalproblems.namegreeting.NameGreetingActivity;
+import com.improve10x.logicalproblems.twomaketen.TwoMakeTenActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         handleMinsToSec();
         handleHrsAndMinsIntoSec();
         handleNameGreeting();
+        handleTwoMakeTen();
     }
 
     private void handleMinsToSec() {
@@ -41,6 +43,13 @@ public class MainActivity extends AppCompatActivity {
     private void handleNameGreeting() {
         binding.nameGreetingBtn.setOnClickListener(v -> {
             Intent intent = new Intent(this, NameGreetingActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void handleTwoMakeTen() {
+        binding.twoMakeTenBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TwoMakeTenActivity.class);
             startActivity(intent);
         });
     }

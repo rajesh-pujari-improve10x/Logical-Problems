@@ -37,6 +37,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Name Greeting" />
+
+            <Button
+                android:id="@+id/two_make_ten_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Two Make Ten" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

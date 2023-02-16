@@ -25,8 +25,14 @@ public class HoursAndMinutesIntoSecondsActivity extends AppCompatActivity implem
         binding.hrsAndMinsToSecBtn.setOnClickListener(v -> {
             String hrs = binding.hrsTxt.getText().toString();
             String mins = binding.minsTxt.getText().toString();
-            int seconds = new HrsAndMinsToSecondsControllerImpl().convertHrsAndMinsToSeconds(hrs, mins);
-            showSeconds(String.valueOf(seconds));
+            int seconds = 0;
+            try {
+                seconds = new HrsAndMinsToSecondsControllerImpl().convertHrsAndMinsToSeconds(hrs, mins);
+                showSeconds(String.valueOf(seconds));
+            } catch (Exception e) {
+                e.printStackTrace();
+                showSeconds("Invalid Input");
+            }
         });
     }
 
